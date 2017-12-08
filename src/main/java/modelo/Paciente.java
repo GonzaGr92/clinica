@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author gustavo
@@ -14,21 +16,21 @@ public class Paciente extends Persona{
     private String direccion;
     private String obraSocial;
     private int nroAfiliado;
-    private String derivacion;
+    private Derivacion derivacion;
+    private ArrayList <Turno> turnos;
 
     public Paciente(String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
     }
 
-    public Paciente(String direccion, String obraSocial, int nroAfiliado, String derivacion, String apellido, String nombre, int telefono, int dni, String email) {
+    public Paciente(String direccion, String obraSocial, int nroAfiliado, Derivacion derivacion, ArrayList<Turno> turno, String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
         this.direccion = direccion;
         this.obraSocial = obraSocial;
         this.nroAfiliado = nroAfiliado;
         this.derivacion = derivacion;
+        this.turnos = turno;
     }
-
-   
 
     @Override
     public int getId() {
@@ -59,16 +61,20 @@ public class Paciente extends Persona{
         this.nroAfiliado = nroAfiliado;
     }
 
-    public String getDerivacion() {
+    public Derivacion getDerivacion() {
         return derivacion;
     }
 
-    public void setDerivacion(String derivacion) {
+    public void setDerivacion(Derivacion derivacion) {
         this.derivacion = derivacion;
     }
 
-    
-    
-    
+    public ArrayList<Turno> getTurnos() {
+        return turnos;
+    }
+
+    public void setTurnos(ArrayList<Turno> turnos) {
+        this.turnos = turnos;
+    }
     
 }
