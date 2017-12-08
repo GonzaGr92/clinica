@@ -9,37 +9,30 @@ package modelo;
  *
  * @author gustavo
  */
-public class Paciente {
+public class Paciente extends Persona{
     private int id;
-    private String apellido;
     private String direccion;
-    private int dni;
-    private String email;
-    private String nombre;
-    private int telefono;
+    private String obraSocial;
+    private int nroAfiliado;
+    private String derivacion;
 
-
-    public Paciente(String apellido, int dni, String nombre) {
-        this.apellido = apellido;
-        this.dni = dni;
-        this.nombre = nombre;
+    public Paciente(String apellido, String nombre, int telefono, int dni, String email) {
+        super(apellido, nombre, telefono, dni, email);
     }
 
-    public Paciente(String apellido, String direccion, int dni, String email, String nombre, int telefono) {
-        this.apellido = apellido;
+    public Paciente(String direccion, String obraSocial, int nroAfiliado, String derivacion, String apellido, String nombre, int telefono, int dni, String email) {
+        super(apellido, nombre, telefono, dni, email);
         this.direccion = direccion;
-        this.dni = dni;
-        this.email = email;
-        this.nombre = nombre;
-        this.telefono = telefono;
+        this.obraSocial = obraSocial;
+        this.nroAfiliado = nroAfiliado;
+        this.derivacion = derivacion;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
+   
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    @Override
+    public int getId() {
+        return id;
     }
 
     public String getDireccion() {
@@ -50,41 +43,31 @@ public class Paciente {
         this.direccion = direccion;
     }
 
-    public int getDni() {
-        return dni;
+    public String getObraSocial() {
+        return obraSocial;
     }
 
-    public void setDni(int dni) {
-        this.dni = dni;
+    public void setObraSocial(String obraSocial) {
+        this.obraSocial = obraSocial;
     }
 
-    public String getEmail() {
-        return email;
+    public int getNroAfiliado() {
+        return nroAfiliado;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setNroAfiliado(int nroAfiliado) {
+        this.nroAfiliado = nroAfiliado;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getDerivacion() {
+        return derivacion;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDerivacion(String derivacion) {
+        this.derivacion = derivacion;
     }
 
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
-    public int getId() {
-        return id;
-    }
+    
     
     
     

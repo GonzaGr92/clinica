@@ -9,17 +9,41 @@ package modelo;
  *
  * @author gustavo
  */
-public class Persona {
+abstract class Persona {
     private int id;
     private String apellido;
     private String nombre;
     private int telefono;
+    private int dni;
+    private String email;
 
-    public Persona(String apellido, String nombre, int telefono) {
+    public Persona(String apellido, String nombre, int telefono, int dni, String email) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.telefono = telefono;
+        this.dni = dni;
+        this.email = email;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    
+
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
+    
 
     public String getApellido() {
         return apellido;
