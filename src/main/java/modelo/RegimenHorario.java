@@ -16,6 +16,36 @@ public class RegimenHorario {
     private LocalTime entrada;
     private LocalTime salida;
     private Dias dia;
+
+    public RegimenHorario(LocalTime entrada, LocalTime salida, Dias dia) {
+        this.entrada = entrada;
+        this.salida = salida;
+        this.dia = dia;
+    }
+
+    public LocalTime getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(LocalTime entrada) {
+        this.entrada = entrada;
+    }
+
+    public LocalTime getSalida() {
+        return salida;
+    }
+
+    public void setSalida(LocalTime salida) {
+        this.salida = salida;
+    }
+
+    public Dias getDia() {
+        return dia;
+    }
+
+    public void setDia(Dias dia) {
+        this.dia = dia;
+    }
     
     
     
