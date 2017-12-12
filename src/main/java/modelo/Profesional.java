@@ -6,23 +6,30 @@ import java.util.ArrayList;
 public class Profesional extends Persona{
    private int id; 
    private int matricula;
-   private ArrayList<RegimenHorario> regimenHorario;
+   private ArrayList <Turno> turnos;
+   private ArrayList <RegimenHorario> regimenHorarios;
 
     public Profesional(String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
+        regimenHorarios = new ArrayList<RegimenHorario>();
     }
 
-    public Profesional(int matricula, String apellido, String nombre, int telefono, int dni, String email) {
+    public Profesional(ArrayList<RegimenHorario> regimenHorarios, String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
-        this.matricula = matricula;
     }
+    
+    public void addRegimenHorario(RegimenHorario regimen){
+        regimenHorarios.add(regimen);
+    }
+
+    
 
     public ArrayList<RegimenHorario> getRegimenHorario() {
-        return regimenHorario;
+        return regimenHorarios;
     }
 
     public void setRegimenHorario(ArrayList<RegimenHorario> regimenHorario) {
-        this.regimenHorario = regimenHorario;
+        this.regimenHorarios = regimenHorario;
     }
 
    @Override
@@ -38,6 +45,12 @@ public class Profesional extends Persona{
         this.matricula = matricula;
     }
 
-   
+    public ArrayList<Turno> getTurno() {
+        return turnos;
+    }
+
+    public void setTurno(ArrayList<Turno> turnos) {
+        this.turnos = turnos;
+    }
     
 }
