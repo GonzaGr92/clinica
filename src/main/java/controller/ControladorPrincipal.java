@@ -6,6 +6,7 @@
 package controller;
 
 import org.hibernate.Session;
+import ui.PantallaPrincipal;
 
 /**
  *
@@ -18,4 +19,8 @@ public class ControladorPrincipal {
         this.session = session;
     }
     
+     public void run () {
+        PantallaPrincipal panel = new PantallaPrincipal();
+        panel.setVisible(true);
+    }
 }
