@@ -9,7 +9,8 @@ package modelo;
  *
  * @author gustavo
  */
-public class Paciente extends Persona{
+public class Paciente extends Persona {
+
     private int id;
     private String direccion;
     private String obraSocial;
@@ -27,8 +28,6 @@ public class Paciente extends Persona{
         this.nroAfiliado = nroAfiliado;
         this.derivacion = derivacion;
     }
-
-   
 
     @Override
     public int getId() {
@@ -55,7 +54,7 @@ public class Paciente extends Persona{
         return nroAfiliado;
     }
 
-    public void setNroAfiliado(int nroAfiliado) {
+    public void setNroAfiliado(int nroAfiliado) { 
         this.nroAfiliado = nroAfiliado;
     }
 
@@ -67,8 +66,4 @@ public class Paciente extends Persona{
         this.derivacion = derivacion;
     }
 
-    
-    
-    
-    
 }
