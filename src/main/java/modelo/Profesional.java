@@ -24,6 +24,14 @@ public class Profesional extends Persona{
 
     
 
+    public ArrayList<RegimenHorario> getRegimenHorario() {
+        return regimenHorarios;
+    }
+
+    public void setRegimenHorario(ArrayList<RegimenHorario> regimenHorario) {
+        this.regimenHorarios = regimenHorario;
+    }
+
    @Override
     public int getId() {
         return id;
@@ -44,10 +52,5 @@ public class Profesional extends Persona{
     public void setTurno(ArrayList<Turno> turnos) {
         this.turnos = turnos;
     }
-
-    
-
-    
-   
     
 }

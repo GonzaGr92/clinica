@@ -10,5 +10,5 @@ package modelo;
  * @author Cintia
  */
 public enum Dias {
-     SALTA, TUCUMAN, CATAMARCA, JUJUY
+     LUNES, TUCUMAN, CATAMARCA, JUJUY
 }
