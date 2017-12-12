@@ -24,12 +24,11 @@ public class Paciente extends Persona {
         super(apellido, nombre, telefono, dni, email);
     }
 
-    public Paciente(String direccion, String obraSocial, int nroAfiliado, String derivacion, String apellido, String nombre, int telefono, int dni, String email) {
+    public Paciente(String direccion, String obraSocial, int nroAfiliado, String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
         this.direccion = direccion;
         this.obraSocial = obraSocial;
         this.nroAfiliado = nroAfiliado;
-        this.derivacion = derivacion;
     }
 
    
