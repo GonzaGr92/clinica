@@ -5,6 +5,9 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
+import modelo.Paciente;
+
 /**
  *
  * @author Guillermina
@@ -121,6 +124,11 @@ public class FormularioPaciente extends javax.swing.JFrame {
         label10.setText("DNI");
 
         btn_guardar.setText("Guardar");
+        btn_guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_guardarActionPerformed(evt);
+            }
+        });
 
         txt_apellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,6 +261,23 @@ public class FormularioPaciente extends javax.swing.JFrame {
     private void txt_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_apellidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_apellidoActionPerformed
+
+    private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
+        if (txt_nombre.getText().isEmpty() || txt_apellido.getText().isEmpty() ||
+            txt_telefono.getText().isEmpty() || txt_dni.getText().isEmpty() 
+            || txt_direccion.getText().isEmpty() || txt_email.getText().isEmpty()
+            || txt_obraSocial.getText().isEmpty() || txt_nAfiliado.getText().isEmpty()
+            || txt_derivacion.getText().isEmpty()) {
+            System.out.println("Todos los campos son obligatorios");
+        } else {
+            Paciente paciente1 = new Paciente(txt_direccion.getText(), txt_obraSocial.getText(), Integer.parseInt(txt_nAfiliado.getText()), txt_derivacion.getText(), txt_apellido.getText() ,txt_nombre.getText(), Integer.parseInt(txt_telefono.getText()), Integer.parseInt(txt_dni.getText()) ,txt_email.getText());
+            JOptionPane.showMessageDialog(null, "Paciente agregado con éxito");
+        }  
+        
+
+      
+
+    }//GEN-LAST:event_btn_guardarActionPerformed
 
     /**
      * @param args the command line arguments

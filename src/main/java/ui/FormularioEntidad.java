@@ -5,6 +5,9 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
+import modelo.Derivacion;
+
 /**
  *
  * @author Guillermina
@@ -27,7 +30,7 @@ public class FormularioEntidad extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txt_dni = new javax.swing.JTextField();
+        txt_cuit = new javax.swing.JTextField();
         label4 = new java.awt.Label();
         txt_telefono = new javax.swing.JTextField();
         label10 = new java.awt.Label();
@@ -39,9 +42,9 @@ public class FormularioEntidad extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txt_dni.addActionListener(new java.awt.event.ActionListener() {
+        txt_cuit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_dniActionPerformed(evt);
+                txt_cuitActionPerformed(evt);
             }
         });
 
@@ -56,6 +59,11 @@ public class FormularioEntidad extends javax.swing.JFrame {
         label10.setText("CUIT");
 
         btn_guardar.setText("Guardar");
+        btn_guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_guardarActionPerformed(evt);
+            }
+        });
 
         label1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         label1.setText("Entidad");
@@ -87,7 +95,7 @@ public class FormularioEntidad extends javax.swing.JFrame {
                                     .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(25, 25, 25)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_dni, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txt_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
@@ -108,7 +116,7 @@ public class FormularioEntidad extends javax.swing.JFrame {
                     .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(txt_dni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_cuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -124,9 +132,9 @@ public class FormularioEntidad extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_dniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dniActionPerformed
+    private void txt_cuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cuitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dniActionPerformed
+    }//GEN-LAST:event_txt_cuitActionPerformed
 
     private void txt_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_telefonoActionPerformed
         // TODO add your handling code here:
@@ -135,6 +143,16 @@ public class FormularioEntidad extends javax.swing.JFrame {
     private void txt_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_nombreActionPerformed
+
+    private void btn_guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardarActionPerformed
+        if (txt_nombre.getText().isEmpty() || txt_cuit.getText().isEmpty() || txt_telefono.getText().isEmpty()) {
+            System.out.println("Todos los campos son obligatorio");
+        } else {
+            Derivacion derivacion1 = new Derivacion(Integer.parseInt(txt_cuit.getText()), txt_nombre.getText());
+            derivacion1.setTelefono(Integer.parseInt(txt_telefono.getText()));
+            JOptionPane.showMessageDialog(null, "Entidad agregado con éxito");
+        }
+    }//GEN-LAST:event_btn_guardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,7 +166,7 @@ public class FormularioEntidad extends javax.swing.JFrame {
     private java.awt.Label label10;
     private java.awt.Label label2;
     private java.awt.Label label4;
-    private javax.swing.JTextField txt_dni;
+    private javax.swing.JTextField txt_cuit;
     private javax.swing.JTextField txt_nombre;
     private javax.swing.JTextField txt_telefono;
     // End of variables declaration//GEN-END:variables

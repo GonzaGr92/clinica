@@ -31,7 +31,6 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="label3" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="label4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="label10" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="label2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="cb_lunes" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="cb_martes" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -39,6 +38,9 @@
                           <Component id="cb_jueves" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="cb_viernes" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="cb_sabado" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label18" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label19" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="label10" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -100,6 +102,8 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txt_sabadoEgreso" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="txt_dni" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                          <Component id="txt_email" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -130,13 +134,23 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="2" attributes="0">
-                  <Component id="txt_matricula" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="label10" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="label4" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_telefono" alignment="2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="2" attributes="0">
-                  <Component id="label4" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_telefono" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="label18" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_dni" alignment="2" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="2" attributes="0">
+                  <Component id="label19" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_email" alignment="2" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="2" attributes="0">
+                  <Component id="txt_matricula" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="label10" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -226,6 +240,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Guardar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_guardarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_apellido">
       <Events>
@@ -403,6 +420,26 @@
     <Component class="javax.swing.JTextField" name="txt_sabadoIngreso">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_sabadoIngresoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt_dni">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dniActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="java.awt.Label" name="label18">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DNI"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Label" name="label19">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Email"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt_email">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_emailActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

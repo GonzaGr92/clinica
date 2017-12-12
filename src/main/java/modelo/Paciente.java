@@ -24,14 +24,15 @@ public class Paciente extends Persona {
         super(apellido, nombre, telefono, dni, email);
     }
 
-    public Paciente(String direccion, String obraSocial, int nroAfiliado, Derivacion derivacion, ArrayList<Turno> turno, String apellido, String nombre, int telefono, int dni, String email) {
+    public Paciente(String direccion, String obraSocial, int nroAfiliado, String derivacion, String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
         this.direccion = direccion;
         this.obraSocial = obraSocial;
         this.nroAfiliado = nroAfiliado;
         this.derivacion = derivacion;
-        this.turnos = turno;
     }
+
+   
 
     @Override
     public int getId() {
@@ -58,7 +59,7 @@ public class Paciente extends Persona {
         return nroAfiliado;
     }
 
-    public void setNroAfiliado(int nroAfiliado) { 
+    public void setNroAfiliado(int nroAfiliado) {
         this.nroAfiliado = nroAfiliado;
     }
 
