@@ -7,16 +7,22 @@ public class Profesional extends Persona{
    private int id; 
    private int matricula;
    private ArrayList <Turno> turnos;
+   private ArrayList <RegimenHorario> regimenHorarios;
 
     public Profesional(String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
+        regimenHorarios = new ArrayList<RegimenHorario>();
     }
 
-    public Profesional(int matricula, ArrayList<Turno> turno, String apellido, String nombre, int telefono, int dni, String email) {
+    public Profesional(ArrayList<RegimenHorario> regimenHorarios, String apellido, String nombre, int telefono, int dni, String email) {
         super(apellido, nombre, telefono, dni, email);
-        this.matricula = matricula;
-        this.turnos = turno;
     }
+    
+    public void addRegimenHorario(RegimenHorario regimen){
+        regimenHorarios.add(regimen);
+    }
+
+    
 
    @Override
     public int getId() {
